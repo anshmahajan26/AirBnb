@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Listing</title>
+</head>
+<body>
+    <h3>Edit Listing</h3>
+
+    <!-- PUT method simulated using _method override -->
+    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
+        <input name="listing[title]" type="text" value="<%= listing.title %>" placeholder="Title" />
+        <br /><br />
+
+        <textarea name="listing[description]" placeholder="Description"><%= listing.description %></textarea>
+        <br /><br />
+
+        <input name="listing[image]" type="text" value="<%= listing.image %>" placeholder="Image URL" />
+        <br /><br />
+
+        <input name="listing[price]" type="number" value="<%= listing.price %>" placeholder="Price" />
+        <br /><br />
+
+        <input name="listing[country]" type="text" value="<%= listing.country %>" placeholder="Country" />
+        <br /><br />
+
+        <input name="listing[location]" type="text" value="<%= listing.location %>" placeholder="Location" />
+        <br /><br />
+
+        <button>Update Listing</button>
+    </form>
+</body>
+</html>

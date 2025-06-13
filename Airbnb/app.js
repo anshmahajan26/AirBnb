@@ -7,9 +7,9 @@ const MONGO_URL = "mongodb+srv://anshmahajan345:grr20QFLPXJqtua2@cluster0.ybos7e
 async function main() {
   try {
     await mongoose.connect(MONGO_URL);
-    console.log("✅ MongoDB Connected Successfully!");
+    console.log(" MongoDB Connected Successfully!");
   } catch (err) {
-    console.error("❌ MongoDB Connection Failed:", err);
+    console.error(" MongoDB Connection Failed:", err);
   }
 }
 main();
@@ -19,5 +19,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(8080, () => {
-  console.log("🚀 Server is listening on port 8080");
+  console.log(" Server is listening on port 8080");
 });

@@ -144,7 +144,7 @@ const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log("Server is started");
 });
-process.on("unhandledRejection", (reason, promise) => {
-  console.error("Unhandled Rejection at:", promise, "reason:", reason);
-  process.exit(1); // Exit the application
-});
+// process.on("unhandledRejection", (reason, promise) => {
+//   console.error("Unhandled Rejection at:", promise, "reason:", reason);
+//   process.exit(1); // Exit the application
+// });

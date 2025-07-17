@@ -127,7 +127,9 @@ main()
 
 async function main() {
   await mongoose.connect(dbUrl);
-}
+};
+
+
 
 // All Route error handler
 app.all("*", (req, res, next) => {
@@ -139,12 +141,14 @@ app.use((err, req, res, next) => {
   let { statusCode = 500, message = "Something went wrong!" } = err;
   res.status(statusCode).render("error.ejs", { message });
 });
-
+//initiate server
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log("Server is started");
 });
-// process.on("unhandledRejection", (reason, promise) => {
-//   console.error("Unhandled Rejection at:", promise, "reason:", reason);
-//   process.exit(1); // Exit the application
-// });
+
+
+process.on("unhandledRejection", (reason, promise) => {
+  console.error("Unhandled Rejection at:", promise, "reason:", reason);
+  process.exit(1); // Exit the application
+});

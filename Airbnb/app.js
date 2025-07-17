@@ -87,7 +87,7 @@ passport.use(new LocalStrategy(User.authenticate()));
 //session rahanya sati
 passport.serializeUser(User.serializeUser());
 
-//session band karyanya sati
+//session band karyanya sathi of authentication
 passport.deserializeUser(User.deserializeUser());
 
 // Middleware for flash messages and current user
